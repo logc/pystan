@@ -230,6 +230,8 @@ def setup_package():
         import distutils.core
         distutils.core._setup_stop_after = 'commandline'
         from distutils.core import setup
+        from Cython.Build import cythonize
+        from numpy.distutils.command import install
 
         metadata['ext_modules'] = cythonize(extensions)
         dist = setup(**metadata)
