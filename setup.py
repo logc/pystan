@@ -213,6 +213,7 @@ def setup_package():
                     url=URL,
                     long_description=LONG_DESCRIPTION,
                     classifiers=CLASSIFIERS,
+                    setup_requires=['Cython>=0.22,!=0.25.1', 'numpy >= 1.7'],
                     **extra_setuptools_args)
     if len(sys.argv) >= 2 and ('--help' in sys.argv[1:] or sys.argv[1]
                                in ('--help-commands', 'egg_info', '--version', 'clean')):
